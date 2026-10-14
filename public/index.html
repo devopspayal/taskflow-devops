@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TaskFlow — a hands-on DevOps task board by Payal. Explore a browser-local demo deployed on Cloudflare.">
+  <title>TaskFlow | DevOps workspace</title>
+  <link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+  <aside><a class="brand" href="/">▦ <span>TaskFlow<span class="dot">.</span></span></a><p class="eyebrow">YOUR WORKSPACE</p><div class="nav active">▤ &nbsp; Project board</div><a class="nav" href="https://github.com/devopspayal/taskflow-devops" target="_blank" rel="noopener noreferrer">↗ &nbsp; Source & documentation</a><div class="aside-bottom"><span class="avatar">P</span><div><strong>Payal's portfolio</strong><small>DevOps • Cloud engineering</small></div></div></aside>
+  <main>
+    <header><span>Workspace <span class="muted">/</span> TaskFlow</span><span class="pill">Browser-local demo</span></header>
+    <section class="heading"><div><p class="eyebrow">BUILD. SHIP. IMPROVE.</p><h1>Good work starts<br>with a clear plan.</h1><p class="subtitle">A focused workspace for your next release.</p></div><button id="new-task" class="primary">+ New task</button></section>
+    <section class="stats" aria-label="Task summary"><article><span>Total tasks</span><strong id="total">0</strong></article><article><span>In progress</span><strong id="progress">0</strong></article><article><span>Completed</span><strong id="completed">0</strong></article><article class="accent"><span>Completion rate</span><strong id="rate">0%</strong></article></section>
+    <section class="toolbar"><h2>Project board</h2><div><label class="sr-only" for="search">Search tasks</label><input id="search" type="search" placeholder="Search tasks…"><label class="sr-only" for="filter">Filter priority</label><select id="filter"><option value="all">All priorities</option><option>High</option><option>Medium</option><option>Low</option></select></div></section>
+    <p id="notice" role="status" aria-live="polite"></p>
+    <section class="board" aria-label="Task board"><section class="column"><h3><i class="todo"></i> To do <span id="todo-count"></span></h3><div id="todo-list"></div></section><section class="column"><h3><i class="doing"></i> In progress <span id="doing-count"></span></h3><div id="doing-list"></div></section><section class="column"><h3><i class="done"></i> Done <span id="done-count"></span></h3><div id="done-list"></div></section></section>
+    <footer><p>Demo data stays in this browser. No login or cloud database is connected yet.</p><span>TaskFlow · v0.1.0</span></footer>
+  </main>
+  <dialog id="task-dialog"><form id="task-form"><div class="dialog-heading"><h2>Create a task</h2><button type="button" id="close-dialog" aria-label="Close dialog">×</button></div><label for="title">Task title</label><input id="title" name="title" required maxlength="120" placeholder="What needs to get done?"><label for="description">Description</label><textarea id="description" name="description" maxlength="500" rows="3" placeholder="Add a little context"></textarea><label for="priority">Priority</label><select id="priority" name="priority"><option>Medium</option><option>High</option><option>Low</option></select><button class="primary" type="submit">Create task</button></form></dialog>
+</body></html>

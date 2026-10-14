@@ -1,0 +1,6 @@
+{
+  "name": "taskflow-devops",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./public" },
+  "build": { "command": "npm test" }
+}
